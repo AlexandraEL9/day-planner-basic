@@ -3,6 +3,15 @@ const form = document.querySelector('.input-field');
 const input = document.querySelector('input');
 const taskList = document.querySelector('.task-list');
 
+// Function to update container height based on the number of list items
+function updateContainerHeight() {
+    const listItemHeight = 50; // Adjust this value based on your list item height
+    const container = document.querySelector('.container'); // Change '.container' to your actual container class
+    const numListItems = document.querySelectorAll('.task-list li').length; // Count the number of list items
+    const newHeight = numListItems * listItemHeight; // Calculate the new height based on the number of list items
+    container.style.minHeight = newHeight + 'px'; // Set the new height for the container
+}
+
 // Function to add a new task
 function addTask(event) {
     // to prevent the page from reloading on form submission
@@ -31,6 +40,8 @@ function addTask(event) {
     taskDiv.appendChild(taskName);
     // clear the input field after adding the new task
     input.value = '';
+    // Update the container height after adding the task
+    updateContainerHeight();
 }
 
 // Function to modify a task
@@ -54,6 +65,8 @@ function taskModify(event) {
             clickedEle.innerHTML = newValue;
         });
     }
+    // Update the container height after adding the task
+    updateContainerHeight();
 }
 
 // Event listeners to add a new task and edit, delete a task
