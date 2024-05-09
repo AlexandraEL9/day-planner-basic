@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <title>to-do list</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>To-Do List</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="heading">To Do List</h1>
-<!--input to add taskstasks-->
-        <form class="input-field">
-            <input type="text" placeholder="Add new task"/>
-            <button type="submit">
-                <i class="fas fa-plus"></i>
-            </button>
-        </form>
-        <h2 class="heading-2">My jobs</h2>
-<!--show existing tasks-->
-        <ul class="task-list">
-            <li class="task"></li>
-            <div class="task-info">
-<!--click when task done-->
-                <input type="checkbox"/>
-                <span>Coding</span>
-            </div>
-<!--remove a task from list-->
-            <button class="delete">
-                <i class="fas fa-trash"></i>
-            </button>
+  <div class="container">
+    <h1 class="heading">To-Do List</h1>
 
-        </ul>
+    <form class="input-field">
+      <input type="text" placeholder="Add new task"/>
+      <button type="submit">
+        <i class="fas fa-plus"></i>
+      </button>
+    </form>
 
+    <h2 class="heading-2">My Tasks</h2>
 
-    </div>
-    
+    <ul class="task-list">
+      
+    </ul>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
